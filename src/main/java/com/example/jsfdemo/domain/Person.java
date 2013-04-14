@@ -16,7 +16,14 @@ public class Person {
 	private double weight;
 	private boolean married;
 	private int numOfChildren;
+	private boolean editable = false;
 	
+	public boolean isEditable() {
+		return editable;
+	}
+	public void setEditable(boolean editable) {
+		this.editable = editable;
+	}
 	@Size(min = 2, max = 20)
 	public String getFirstName() {
 		return firstName;

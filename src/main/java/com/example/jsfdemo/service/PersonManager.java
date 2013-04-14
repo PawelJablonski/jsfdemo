@@ -21,7 +21,12 @@ public class PersonManager {
 		newPerson.setMarried(person.isMarried());
 		newPerson.setWeight(person.getWeight());
 		newPerson.setNumOfChildren(person.getNumOfChildren());
-
+		
+		if(person.isEditable())
+		{
+			
+		}
+		else
 		db.add(newPerson);
 	}
 
@@ -40,5 +45,10 @@ public class PersonManager {
 
 	public List<Person> getAllPersons() {
 		return db;
+	}
+
+	public String editPerson(Person person) {
+		person.setEditable(true);
+		return "addSimple";
 	}
 }
